@@ -2,7 +2,7 @@
 from smb_build_getter.python3.smb.SMBConnection import SMBConnection
 
 
-device_name = ""
+device_name = "" #enter the remote machine name
 conn = SMBConnection("", "", "", device_name, use_ntlm_v2 = False)
 try:
     conn.connect("192.168.1.30", 139)
