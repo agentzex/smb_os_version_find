@@ -2,10 +2,11 @@
 from smb_build_getter.python3.smb.SMBConnection import SMBConnection
 
 
-device_name = "" #enter the remote machine name
+device_name = ""  # enter the remote machine name
+ip = ""  # enter the remote machine IP
 conn = SMBConnection("", "", "", device_name, use_ntlm_v2 = False)
 try:
-    conn.connect("192.168.1.30", 139)
+    conn.connect(ip, 139)
 except Exception as e:
     if str(e) != "Found build":
         raise e
